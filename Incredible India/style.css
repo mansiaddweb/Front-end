@@ -1,0 +1,279 @@
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navi{
+            display: inline;
+            width: 1200px;
+        padding: 3rem;
+        margin-left: 100px;
+        }
+
+        .dropbtn {
+            background-color: #ecf1ec;
+            color:gray;
+            padding: 10px;
+            margin: 1px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #8b7777;
+            color: white;
+            min-width: 160px;
+            /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+            z-index: 1;
+          }
+          
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          .dropdown-content a:hover {background-color: #020202;
+        color: white;}
+          
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+          
+          .dropdown:hover .dropbtn {
+            background-color: #7c837c;
+            color: white;
+          }
+
+        #he {
+            /* text-align: center; */
+            margin-left: 180px;
+            font-weight: bolder;
+            font-size: 3rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        div {
+            display: block;
+        }
+
+        body {
+            /* overflow-x: hidden; */
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: 1.1px;
+
+        }
+
+        select {
+            border: 0;
+        }
+
+        li {
+            display: inline;
+        }
+
+        header {
+            float: left;
+            margin: 1rem;
+
+            font-family: serif;
+            color: rgb(70, 68, 68);
+
+            font-size: 1.25rem;
+            width: 100%;
+        }
+
+        video {
+            margin: 5px 25px;
+            border-radius: 1em;
+        }
+
+        .para{
+            color: grey;
+            margin: 10px 110px;
+            text-align: center;
+            font-size: 1.50rem;
+        }
+
+        .box{
+            width: 400px;
+            margin: 10px;
+            position: absolute;
+            border: solid  black;
+            margin-left: 750px;
+            margin-top: -600px;
+            background-color: rgb(185, 185, 170, 0.5);
+            
+            /* height: 450px; */
+        }
+        .sm{
+            border-bottom:solid black;
+        }
+        .car{
+            color: darkblue;
+            font-size: larger;
+            text-decoration: none;
+        }
+        .pics {
+            width: 256px;
+            height: 200px;
+        
+        }
+        
+        .pics:hover{
+box-shadow: 10px 5px 10px 5px #0a0909;
+        }
+
+         .ab{
+            margin-left: 45%;
+            text-decoration: none;
+            color: blueviolet;
+        } 
+
+        .im {
+            margin: 50px 110px;
+        }
+
+        h2 {
+            color: rgb(92, 88, 88);
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        div {
+            width: 100%;
+            /* padding: 2rem; */
+
+        }
+
+        #she {
+            float: right;
+            /* word-spacing: 1em; */
+        }
+        .par{
+            color: #8b7777;
+            border: #ecf1ec;
+            background-color: rgba(128, 130, 133, 0.5);
+            font-family:  'Courier New', Courier, monospace;
+            margin: 10px;
+            padding-left: 3rem;
+            padding-bottom: 0;
+            /* padding-top: 3rem; */
+            font-size: large;
+            /* width: 9; */
+        }
+
+        #unity {
+            margin: 0px;
+            height: 900px;
+        }
+
+        .btn{
+            cursor: pointer;
+            border-radius: 100px;
+            padding: 10px 18px;
+            box-shadow: 0 5px 10px 0 rgb(157 166 179/50%);
+            background-color: #1a73e8;
+            border-color: blue;
+            font-size: 14px;
+            font-family: sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            /* grid-gap: 1px; */
+            background-color: #2196F3;
+            /* padding: 10px; */
+        }
+
+        /*  .grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid black; 
+  text-align: center;
+  font-size: 30px; 
+} */
+        .slider{
+        width: 1300px;
+        height: 658px;
+        border: solid black;
+        z-index: -1;
+        overflow: hidden;
+            border: black;
+    s    /* background-color: black; */
+    }
+
+.slide-images{
+    position: relative;
+        width: 6500px;
+        padding: 0;
+        /* height: 850px; */
+    animation-name: sliding;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+
+}
+        @keyframes sliding {
+            0% {
+                left: 0;
+            }
+
+            16% {
+                left: 0;
+            }
+
+            20% {
+                left: -1300px;
+            }
+
+            36% {
+                left: -1300px;
+            }
+
+            40% {
+                left: -2600px;
+            }
+
+            56% {
+                left: -2600px;
+            }
+
+            60% {
+                left: -3900px;
+            }
+
+            76% {
+                left: -3900px;
+            }
+
+            80% {
+                left: -5200px;
+            }
+
+            96% {
+                left: -5200px;
+            }
+
+            100% {
+                left: 6500px;
+
+            }
+
+        }
+
+        .slide-images img {
+            float: left;
+        }

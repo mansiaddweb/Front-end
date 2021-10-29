@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=4, y=2, z=11;
+        document.write("Enter two Num: <br>"+x+"<br>"+y+"<br>"+z+"<br>");
+        if(x<y&&x<z){
+            document.write("sorting= "+x+"<br>");
+            if(y<z){
+                document.write(y+"<br>");
+                document.write(z+"<br>");
+            }
+            else{
+                document.write(z+"<br>");
+                document.write(y+"<br>");
+            }
+            
+        }
+        else if(y<x&&y<z){
+            document.write("sorting= "+y+"<br>");
+            if(x<z){
+                document.write(x+"<br>");
+                document.write(z+"<br>");  
+            }
+            else{
+                document.write(z+"<br>");
+                document.write(x+"<br>");
+            }
+        }
+        else if(z<x&&z<y){
+document.write("sorting= "+z+"<br>");
+if(x<y){
+    document.write(x+"<br>");
+                document.write(y+"<br>");
+}
+else{
+    document.write(y+"<br>");
+                document.write(x+"<br>");
+}
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Form</title>
+    <!-- CSS only -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="" onsubmit="return validation()">
+        <h1 style="text-align: center;">Admission Form</h1>
+        <div class=" bg-danger py-2">
+            <h3 class="m-0"> Personal Details:-</h3>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <small>Application No.
+                        <span id="ap" class="text-danger"></span>
+                    </small>
+                    <input type="text" name="app" id="app" placeholder="Application No." class="form-control">
+
+                </div>
+                <div class="col-sm-4">
+                    <small>Student Name <span id="sn" class="text-danger"></span></small><br>
+                    <input type="text" name="stu" id="stu" placeholder="Enter Full Name" class="form-control">
+
+                </div>
+                <div class="col-sm-4">
+                    <small>Email ID <span id="ei" class="text-danger"></span></small><br>
+                    <input type="text" name="email" id="email" placeholder="Enter Email ID" class="form-control">
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <small>Contact No.
+                        <span id="cn" class="text-danger"></span>
+                    </small><br>
+                    <input type="text" name="contact" id="contact" class="form-control" placeholder="Enter Contact No.">
+
+                </div>
+                <div class="col-sm-4">
+                    <small>Date Of Birth <span id="db" class="text-danger"></span></small><br>
+                    <input type="date" name="dob" id="dob" placeholder="dd/mm/yyyy" class="form-control">
+
+                </div>
+                <div class="col-sm-4">
+                    <small>Gender <span id="ge" class="text-danger"></span></small><br>
+                    <input type="radio" name="gender" id="gender" value="male">Male
+                    <input type="radio" name="gender" id="gender" value="female">Female
+                    <input type="radio" name="gender" id="gender" value="other">Other
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <small>Aadhar No.
+                        <span id="an" class="text-danger"></span>
+                    </small><br>
+                    <input type="text" name="aadhar" id="aadhar" placeholder="Enter Aadhar No." class="form-control">
+
+                </div>
+                <div class="col-sm-4">
+                    <small>Father's Name <span id="fn" class="text-danger"></span></small><br>
+                    <input type="text" name="father" id="father" placeholder="Enter Father Name" class="form-control">
+
+                </div>
+                <div class="col-sm-4">
+                    <small>Mother's Name <span id="mn" class="text-danger"></span></small><br>
+                    <input type="text" name="mother" id="mother" placeholder="Enter Mother Name" class="form-control">
+
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <small>Category <span id="cat" class="text-danger"></span>
+                    </small><br>
+                    <select name="category" id="category" class="form-control">
+                        <option selected="selected" value="Selected Category">Selected Category</option>
+                        <option value="General">General</option>
+                        <option value="OBC">OBC</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <small>Religion <span id="re" class="text-danger"></span></small><br>
+                    <select name="religion" id="religion" class="form-control">
+                        <option selected="selected" value="Select">--Select--</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Muslim">Muslim</option>
+                        <option value="Sikh">Sikh</option>
+                        <option value="Christian">Christian</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+                <div class="col-sm-4">
+                    <small>Nationality <span id="na" class="text-danger"></span></small><br>
+                    <input type="text" name="nationality" id="nationality" class="form-control"
+                        placeholder="Nationality">
+
+                </div>
+            </div>
+        </div> <br>
+        <div class="bg-danger py-2">
+            <h3 class="m-0">Address Details:-</h3>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <small>Address<span id="ad" class="text-danger"></span>
+                    </small>
+                    <input type="text" name="address" id="address" placeholder="Enter Address" class="form-control">
+
+                </div>
+                <div class="col-sm-6">
+                    <small>State <span id="st" class="text-danger"></span></small><br>
+                    <select name="state" id="state" class="form-control">
+                        <option selected="selected" value="Select">--Select--</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Gujrat">Gujrat</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <small>City
+                        <span id="ct" class="text-danger"></span>
+                    </small><br>
+                    <input type="text" name="city" id="city" class="form-control" placeholder="Enter City">
+
+                </div>
+                <div class="col-sm-6">
+                    <small>Pincode<span id="pc" class="text-danger"></span></small><br>
+                    <input type="text" name="pin" id="pin" placeholder="Enter Pincode" class="form-control">
+
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="bg-danger py-2">
+            <h3 class="m-0">Course Details:-</h3>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <small>Discipline
+                        <span id="dis" class="text-danger"></span>
+                    </small><br>
+                    <select name="discipline" id="discipline" class="form-control">
+                        <option selected="selected" value="Select">--Select--</option>
+                        <option value="UG">UG</option>
+                        <option value="PG">PG</option>
+
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <small>Programme
+                        <span id="pro" class="text-danger"></span>
+                    </small><br>
+                    <select name="programme" id="programme" class="form-control">
+                        <option selected="selected" value="Select">--Select--</option>
+                        <option value="UG">UG</option>
+                        <option value="PG">PG</option>
+
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <small>Speciality
+                        <span id="sp" class="text-danger"></span>
+                    </small><br>
+                    <select name="speciality" id="speciality" class="form-control">
+                        <option selected="selected" value="Select">--Select--</option>
+                        <option value="UG">UG</option>
+                        <option value="PG">PG</option>
+
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="bg-danger py-2">
+            <h3 class="m-0">Educational Details</h3>
+        </div>
+        <div class="conatainer-fluid">
+            <div class="row">
+                <div class="col-sm-2 text-center my-4">10<sup>th</sup></div>
+                <div class="col-sm-2"><small>Status</small> <span id="sta" class="text-danger"></span><br>
+                    <select name="status" id="status" class="form-control">
+                        <option selected="selected" value="Select">Passed</option>
+                        <!-- <option value="Pursuing">Pursuing</option> -->
+                    </select>
+                </div>
+                <div class="col-sm-2"><small>Board</small><span id="boa"></span><br>
+                    <input type="text" name="board" id="board" class="form-control">
+                </div>
+                <div class="col-sm-2"><small>Percentage</small><span id="per"></span><br>
+                    <input type="text" name="pecentage" id="percentage" class="form-control">
+                </div>
+                <div class="col-sm-2"><small>Year</small><span id="num"></class="text-danger"span><br>
+                    <input type="number" name="number" id="number" value="2021" class="form-control">
+                </div>
+                <div class="col-sm-2"><small>Subject</small><span id="sub"></span><br>
+                    <input type="text" name="subject" id="subject" class="form-control">
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-sm-2 text-center my-4">12<sup>th</sup></div>
+                <div class="col-sm-2"><small>Status</small> <span id="sta2" class="text-danger"></span><br>
+                    <select name="status2" id="status2" class="form-control">
+                        <option selected="selected" value="Select">Passed</option>
+                        <!-- <option value="Pursuing">Pursuing</option> -->
+                    </select>
+                </div>
+                <div class="col-sm-2"><small>Board</small><span id="boa2"></span><br>
+                    <input type="text" name="board2" id="board2" class="form-control">
+                </div>
+                <div class="col-sm-2"><small>Percentage</small><span id="per2"></span><br>
+                    <input type="text" name="pecentage2" id="percentage2" class="form-control">
+                </div>
+                <div class="col-sm-2"><small>Year</small><span id="num2"></span><br>
+                    <input type="number" name="number2" id="number2" value="2021" class="form-control">
+                </div>
+                <div class="col-sm-2"><small>Subject</small><span id="sub2"></span><br>
+                    <input type="text" name="subject2" id="subject2" class="form-control">
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 text-center my-4">UG</div>
+                <div class="col-sm-2"><small>Status</small> <span id="sta3" class="text-danger"></span><br>
+                    <select name="status3" id="status3" class="form-control">
+                        <option selected="selected" value="Select">Passed</option>
+                        <option value="Pursuing">Pursuing</option>
+                    </select>
+                </div>
+                <div class="col-sm-2"><small>Board</small><span id="boa3"></span><br>
+                    <input type="text" name="board3" id="board3" class="form-control">
+                </div>
+                <div class="col-sm-2"><small>Percentage</small><span id="per3"></span><br>
+                    <input type="text" name="pecentage3" id="percentage3" class="form-control">
+                </div>
+                <div class="col-sm-2"><small>Year</small><span id="num3"></span><br>
+                    <input type="number" name="number3" id="number3" value="2021" class="form-control">
+                </div>
+                <div class="col-sm-2"><small>Subject</small><span id="sub3"></span><br>
+                    <input type="text" name="subject3" id="subject3" class="form-control">
+                </div>
+
+
+            </div>
+
+        </div>
+        <br><br>
+        <div class="d-grid gap-2 col-6 mx-auto">
+
+            <input class="btn btn-success" type="submit" value="Proceed to Payment">
+        </div>
+        <br><br>
+    </form>
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   -->
+    <!-- <script src="script.js"></script> -->
+    <script>
+        function validation() {
+            var app = document.getElementById("app").value;
+            var stu = document.getElementById("stu").value;
+            var email = document.getElementById("email").value;
+            var contact = document.getElementById("contact").value;
+            var dob = document.getElementById("dob").value;
+            var gender=document.getElementById("gender").value;
+            var aadhar=document.getElementById("aadhar").value;
+            var father=document.getElementById("father").value;
+            var mother=document.getElementById("mother").value;
+            var category=document.getElementById("category").value;
+            var religion=document.getElementById("religion").value;
+            var nationality=document.getElementById("nationality").value;
+            var address=document.getElementById("address").value;
+            var state=document.getElementById("state").value;
+            var city=document.getElementById("city").value;
+            var pin = document.getElementById("pin").value;
+            // var discipline=document.getElementById("discipline").value;
+            // var programme=document.getElementById("programme").value;
+            // var speciality=document.getElementById("speciality").value;
+            // var status=document.getElementById("status").value;
+            // var board=document.getElementById("board").value;
+            // var year=document.getElementById("year").value;
+            // var percentage=document.getElementById("percentage").value;
+            // var subject=document.getElementById("subject").value;
+            // var status2=document.getElementById("status2").value;
+            // var board2=document.getElementById("board2").value;
+            // var year2=document.getElementById("year2").value;
+            // var percentage2=document.getElementById("percentage2").value;
+            // var subject2=document.getElementById("subject2").value;
+            // var status3=document.getElementById("status3").value;
+            // var board3=document.getElementById("board3").value;
+            // var year3=document.getElementById("year3").value;
+            // var percentage3=document.getElementById("percentage3").value;
+            // var subject3=document.getElementById("subject3").value;
+            
+            
+            if (app == "") {
+                document.getElementById("ap").innerHTML = " ** Enter Application No. **";
+                return false;
+            }
+            var rename = /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/;
+            if (stu == "") {
+                document.getElementById("sn").innerHTML = " ** Enter student name **";
+                return false;
+            } 
+             if (!stu.match(rename)) {
+                document.getElementById("sn").innerHTML = " ** Enter student name **";
+                return false;
+            }
+             
+            if (email == "") {
+                document.getElementById("ei").innerHTML = " ** Enter Email ID **";
+                return false;
+            }
+           
+
+            var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!re.test(email)) {
+                document.getElementById("ei").innerHTML = " ** enter valid email id **";
+                return false;
+            }
+            if (contact == "") {
+                document.getElementById("cn").innerHTML = " ** Enter Contact No. **";
+                return false;
+            }
+           
+            var reMobile = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if (!contact.match(reMobile)) {
+                document.getElementById("cn").innerHTML = " ** mobile number must be 10 digit **";
+                return false;
+            }
+            if (dob == "") {
+                document.getElementById("db").innerHTML = " ** Enter DOB **";
+                return false;
+            }
+            if (gender.value == "") {
+                document.getElementById("ge").innerHTML = " ** Select Gender **";
+                return false;
+            }
+            if (aadhar == "") {
+                document.getElementById("an").innerHTML = " ** Enter Aadhar Number **";
+                return false;
+            }
+            if (father == "") {
+                document.getElementById("fn").innerHTML = " ** Enter Father name **";
+                return false;
+            }
+            if (mother == "") {
+                document.getElementById("mn").innerHTML = " ** Enter Mother name **";
+                return false;
+            }
+            if (category == "") {
+                document.getElementById("cat").innerHTML = " ** Select Category **";
+                return false;
+            }
+            
+            if (religion == "") {
+                document.getElementById("re").innerHTML = " ** Select Religion **";
+                return false;
+            }
+
+            if (nationality == "") {
+                document.getElementById("na").innerHTML = " ** Select Religion **";
+                return false;
+            }
+
+            if (address == "") {
+                document.getElementById("ad").innerHTML = " ** Select Address **";
+                return false;
+            }
+
+            if (city == "") {
+                document.getElementById("ct").innerHTML = " ** Select Religion **";
+                return false;
+            }
+            if (pin == "") {
+                document.getElementById("pc").innerHTML = " ** Enter Pin Code **";
+                return false;
+            }
+          
+            var repin = /^[1-9]{1}\d{5}$/;
+            if (!pin.match(repin)) {
+                document.getElementById("pc").innerHTML = " ** pincode is incorrect **";
+                return false;
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
